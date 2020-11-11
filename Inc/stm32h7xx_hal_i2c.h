@@ -233,6 +233,7 @@ typedef struct __I2C_HandleTypeDef
   void (* MspDeInitCallback)(struct __I2C_HandleTypeDef *hi2c);              /*!< I2C Msp DeInit callback                   */
 
 #endif  /* USE_HAL_I2C_REGISTER_CALLBACKS */
+  void                       *userData;         /*!< Pointer to any used data associated with the handle */
 } I2C_HandleTypeDef;
 
 #if (USE_HAL_I2C_REGISTER_CALLBACKS == 1)

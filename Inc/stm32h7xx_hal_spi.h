@@ -215,6 +215,7 @@ typedef struct __SPI_HandleTypeDef
   void (* MspDeInitCallback)(struct __SPI_HandleTypeDef *hspi);    /*!< SPI Msp DeInit callback            */
 
 #endif  /* USE_HAL_SPI_REGISTER_CALLBACKS */
+  void                       *userData;         /*!< Pointer to any used data associated with the handle */
 } SPI_HandleTypeDef;
 
 #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1UL)
