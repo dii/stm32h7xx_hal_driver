@@ -154,7 +154,8 @@ typedef struct
   void (* MspInitCallback)                (struct __MMC_HandleTypeDef *hmmc);
   void (* MspDeInitCallback)              (struct __MMC_HandleTypeDef *hmmc);
 #endif
-}MMC_HandleTypeDef;
+  void                         *userData;        /*!< Pointer to any used data associated with the handle */
+} MMC_HandleTypeDef;
 
 
 /**

@@ -257,7 +257,7 @@ typedef struct __SMARTCARD_HandleTypeDef
 
   void (* MspDeInitCallback)(struct __SMARTCARD_HandleTypeDef *hsmartcard);         /*!< SMARTCARD Msp DeInit callback              */
 #endif  /* USE_HAL_SMARTCARD_REGISTER_CALLBACKS */
-
+  void                              *userData;             /*!< Pointer to any used data associated with the handle */
 } SMARTCARD_HandleTypeDef;
 
 #if (USE_HAL_SMARTCARD_REGISTER_CALLBACKS == 1)

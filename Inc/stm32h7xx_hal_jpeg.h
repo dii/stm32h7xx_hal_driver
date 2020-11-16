@@ -154,8 +154,7 @@ typedef struct
 
 
 #endif /* (USE_HAL_JPEG_REGISTER_CALLBACKS) */
-
-
+  void                     *userData;        /*!< Pointer to any used data associated with the handle */
 } JPEG_HandleTypeDef;
 /**
   * @}

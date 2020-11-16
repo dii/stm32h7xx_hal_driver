@@ -91,7 +91,7 @@ typedef struct
   void (* MspInitCallback)                (struct __DAC_HandleTypeDef *hdac);
   void (* MspDeInitCallback )             (struct __DAC_HandleTypeDef *hdac);
 #endif /* USE_HAL_DAC_REGISTER_CALLBACKS */
-
+  void                        *userData;     /*!< Pointer to any used data associated with the handle */
 } DAC_HandleTypeDef;
 
 /**

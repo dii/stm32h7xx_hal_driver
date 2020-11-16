@@ -79,6 +79,7 @@ typedef struct
 
   void              (* MspInitCallback)(struct __WWDG_HandleTypeDef *hwwdg); /*!< WWDG Msp Init callback */
 #endif
+  void              *userData;  /*!< Pointer to any used data associated with the handle */
 } WWDG_HandleTypeDef;
 
 #if (USE_HAL_WWDG_REGISTER_CALLBACKS == 1)

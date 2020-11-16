@@ -135,6 +135,7 @@ typedef struct
   void (* MspInitCallback)(struct __PCD_HandleTypeDef *hpcd);                          /*!< USB OTG PCD Msp Init callback           */
   void (* MspDeInitCallback)(struct __PCD_HandleTypeDef *hpcd);                        /*!< USB OTG PCD Msp DeInit callback         */
 #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
+  void                    *userData;   /*!< Pointer to any used data associated with the handle */
 } PCD_HandleTypeDef;
 
 /**

@@ -124,6 +124,7 @@ typedef struct
   void  (* MspInitCallback)        ( struct __NOR_HandleTypeDef * hnor);    /*!< NOR Msp Init callback              */
   void  (* MspDeInitCallback)      ( struct __NOR_HandleTypeDef * hnor);    /*!< NOR Msp DeInit callback            */
 #endif
+  void                          *userData;    /*!< Pointer to any used data associated with the handle */
 } NOR_HandleTypeDef;
 
 #if (USE_HAL_NOR_REGISTER_CALLBACKS == 1)

@@ -167,6 +167,7 @@ typedef struct
   void (* MspInitCallback)(struct __HRTIM_HandleTypeDef *hhrtim);                              /*!< HRTIM MspInit callback function pointer                             */
   void (* MspDeInitCallback)(struct __HRTIM_HandleTypeDef *hhrtim);                            /*!< HRTIM MspInit callback function pointer                             */
 #endif /* USE_HAL_HRTIM_REGISTER_CALLBACKS */
+  void                         *userData;                    /*!< Pointer to any used data associated with the handle */
 } HRTIM_HandleTypeDef;
 
 /**

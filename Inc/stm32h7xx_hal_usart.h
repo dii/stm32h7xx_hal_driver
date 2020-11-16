@@ -175,7 +175,7 @@ typedef struct __USART_HandleTypeDef
   void (* MspInitCallback)(struct __USART_HandleTypeDef *husart);           /*!< USART Msp Init callback                */
   void (* MspDeInitCallback)(struct __USART_HandleTypeDef *husart);         /*!< USART Msp DeInit callback              */
 #endif  /* USE_HAL_USART_REGISTER_CALLBACKS */
-  void                       *userData;         /*!< Pointer to any used data associated with the handle */
+  void                          *userData;               /*!< Pointer to any used data associated with the handle */
 } USART_HandleTypeDef;
 
 #if (USE_HAL_USART_REGISTER_CALLBACKS == 1)

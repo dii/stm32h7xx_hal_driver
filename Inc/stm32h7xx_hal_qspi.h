@@ -104,7 +104,7 @@ typedef struct
   uint8_t                    *pRxBuffPtr;      /* Pointer to QSPI Rx transfer Buffer */
   __IO uint32_t              RxXferSize;       /* QSPI Rx Transfer size              */
   __IO uint32_t              RxXferCount;      /* QSPI Rx Transfer Counter           */
-  MDMA_HandleTypeDef          *hmdma;            /* QSPI Rx/Tx MDMA Handle parameters   */
+  MDMA_HandleTypeDef         *hmdma;           /* QSPI Rx/Tx MDMA Handle parameters   */
   __IO HAL_LockTypeDef       Lock;             /* Locking object                     */
   __IO HAL_QSPI_StateTypeDef State;            /* QSPI communication state           */
   __IO uint32_t              ErrorCode;        /* QSPI Error code                    */
@@ -122,6 +122,7 @@ typedef struct
   void (* MspInitCallback)      (struct __QSPI_HandleTypeDef *hqspi);
   void (* MspDeInitCallback)    (struct __QSPI_HandleTypeDef *hqspi);
 #endif
+  void                       *userData;        /*!< Pointer to any used data associated with the handle */
 }QSPI_HandleTypeDef;
 
 /**

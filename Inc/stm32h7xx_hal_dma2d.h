@@ -166,6 +166,8 @@ typedef struct __DMA2D_HandleTypeDef
   __IO HAL_DMA2D_StateTypeDef State;                                                        /*!< DMA2D transfer state.                      */
 
   __IO uint32_t               ErrorCode;                                                    /*!< DMA2D error code.                          */
+
+  void                        *userData;                                                    /*!< Pointer to any used data associated with the handle */
 } DMA2D_HandleTypeDef;
 
 #if (USE_HAL_DMA2D_REGISTER_CALLBACKS == 1)

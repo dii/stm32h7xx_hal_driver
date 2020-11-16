@@ -163,7 +163,8 @@ typedef struct
   void (* MspInitCallback)                (struct __SD_HandleTypeDef *hsd);
   void (* MspDeInitCallback)              (struct __SD_HandleTypeDef *hsd);
 #endif /* USE_HAL_SD_REGISTER_CALLBACKS */
-}SD_HandleTypeDef;
+  void                        *userData;         /*!< Pointer to any used data associated with the handle */
+} SD_HandleTypeDef;
 
 /**
   * @}

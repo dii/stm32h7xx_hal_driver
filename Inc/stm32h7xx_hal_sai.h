@@ -253,6 +253,7 @@ typedef struct __SAI_HandleTypeDef
   void (*MspInitCallback)(struct __SAI_HandleTypeDef *hsai);     /*!< SAI MSP init callback */
   void (*MspDeInitCallback)(struct __SAI_HandleTypeDef *hsai);   /*!< SAI MSP de-init callback */
 #endif
+  void                      *userData;    /*!< Pointer to any used data associated with the handle */
 } SAI_HandleTypeDef;
 /**
   * @}

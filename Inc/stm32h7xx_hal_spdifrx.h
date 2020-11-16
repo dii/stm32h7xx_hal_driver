@@ -176,7 +176,7 @@ typedef struct
   void (* MspInitCallback)( struct __SPDIFRX_HandleTypeDef * hspdif);   /*!< SPDIFRX Msp Init callback  */
   void (* MspDeInitCallback)( struct __SPDIFRX_HandleTypeDef * hspdif); /*!< SPDIFRX Msp DeInit callback  */
 #endif /* USE_HAL_SPDIFRX_REGISTER_CALLBACKS */
-
+  void                       *userData;    /*!< Pointer to any used data associated with the handle */
 } SPDIFRX_HandleTypeDef;
 /**
   * @}

@@ -451,7 +451,7 @@ typedef struct
   void    (* MspDeInitCallback)  ( struct __ETH_HandleTypeDef * heth);    /*!< ETH Msp DeInit callback            */
 
 #endif  /* USE_HAL_ETH_REGISTER_CALLBACKS */                                                             
-
+  void                       *userData;                 /*!< Pointer to any used data associated with the handle */
 } ETH_HandleTypeDef;
 /** 
   * 

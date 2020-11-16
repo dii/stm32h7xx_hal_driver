@@ -118,6 +118,8 @@ typedef struct
 
                                            Note that constant CRC_INPUT_FORMAT_UNDEFINED is defined but an initialization error
                                            must occur if InputBufferFormat is not one of the three values listed above  */
+
+  void                        *userData;   /*!< Pointer to any used data associated with the handle */
 } CRC_HandleTypeDef;
 /**
   * @}

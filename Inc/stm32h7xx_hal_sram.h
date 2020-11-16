@@ -73,7 +73,7 @@ typedef struct
 
   __IO HAL_SRAM_StateTypeDef    State;      /*!< SRAM device access state                     */
 
-  MDMA_HandleTypeDef             *hmdma;      /*!< Pointer DMA handler                          */
+  MDMA_HandleTypeDef            *hmdma;     /*!< Pointer DMA handler                          */
 
 #if (USE_HAL_SRAM_REGISTER_CALLBACKS == 1)
   void  (* MspInitCallback)        ( struct __SRAM_HandleTypeDef * hsram);    /*!< SRAM Msp Init callback              */
@@ -81,6 +81,7 @@ typedef struct
   void  (* DmaXferCpltCallback)    ( MDMA_HandleTypeDef * hmdma);               /*!< SRAM DMA Xfer Complete callback     */
   void  (* DmaXferErrorCallback)   ( MDMA_HandleTypeDef * hmdma);               /*!< SRAM DMA Xfer Error callback        */
 #endif
+  void                          *userData;  /*!< Pointer to any used data associated with the handle */
 } SRAM_HandleTypeDef;
 
 #if (USE_HAL_SRAM_REGISTER_CALLBACKS == 1)

@@ -74,7 +74,7 @@ typedef struct
 
   HAL_LockTypeDef               Lock;       /*!< SDRAM locking object                  */
 
-  MDMA_HandleTypeDef             *hmdma;      /*!< Pointer DMA handler                   */
+  MDMA_HandleTypeDef            *hmdma;     /*!< Pointer DMA handler                   */
 
 #if (USE_HAL_SDRAM_REGISTER_CALLBACKS == 1)
   void  (* MspInitCallback)        ( struct __SDRAM_HandleTypeDef * hsdram);    /*!< SDRAM Msp Init callback              */
@@ -83,6 +83,7 @@ typedef struct
   void  (* DmaXferCpltCallback)    ( MDMA_HandleTypeDef * hmdma);                 /*!< SDRAM DMA Xfer Complete callback     */
   void  (* DmaXferErrorCallback)   ( MDMA_HandleTypeDef * hmdma);                 /*!< SDRAM DMA Xfer Error callback        */
 #endif
+  void                          *userData;  /*!< Pointer to any used data associated with the handle */
 } SDRAM_HandleTypeDef;
 
 #if (USE_HAL_SDRAM_REGISTER_CALLBACKS == 1)

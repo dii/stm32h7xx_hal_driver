@@ -131,6 +131,7 @@ typedef struct
   void (*MspInitCallback)   (struct __DFSDM_Channel_HandleTypeDef *hdfsdm_channel); /*!< DFSDM channel MSP init callback */
   void (*MspDeInitCallback) (struct __DFSDM_Channel_HandleTypeDef *hdfsdm_channel); /*!< DFSDM channel MSP de-init callback */
 #endif
+  void                           *userData; /*!< Pointer to any used data associated with the handle */
 } DFSDM_Channel_HandleTypeDef;
 
 #if (USE_HAL_DFSDM_REGISTER_CALLBACKS == 1)
@@ -246,6 +247,7 @@ typedef struct
   void (*MspInitCallback)         (struct __DFSDM_Filter_HandleTypeDef *hdfsdm_filter); /*!< DFSDM filter MSP init callback */
   void (*MspDeInitCallback)       (struct __DFSDM_Filter_HandleTypeDef *hdfsdm_filter); /*!< DFSDM filter MSP de-init callback */
 #endif
+  void                          *userData;           /*!< Pointer to any used data associated with the handle */
 }DFSDM_Filter_HandleTypeDef;
 
 /**

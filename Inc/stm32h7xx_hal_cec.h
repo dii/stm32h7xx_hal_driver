@@ -193,6 +193,7 @@ typedef struct
   void (* MspDeInitCallback)(struct __CEC_HandleTypeDef *hcec);             /*!< CEC Msp DeInit callback            */
 
 #endif /* (USE_HAL_CEC_REGISTER_CALLBACKS) */
+  void                    *userData;      /*!< Pointer to any used data associated with the handle */
 } CEC_HandleTypeDef;
 
 #if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)

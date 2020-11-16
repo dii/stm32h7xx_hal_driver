@@ -196,7 +196,7 @@ typedef struct
 
   void (* MspDeInitCallback)(struct __IRDA_HandleTypeDef *hirda);         /*!< IRDA Msp DeInit callback              */
 #endif  /* USE_HAL_IRDA_REGISTER_CALLBACKS */
-
+  void                     *userData;        /*!< Pointer to any used data associated with the handle */
 } IRDA_HandleTypeDef;
 
 #if (USE_HAL_IRDA_REGISTER_CALLBACKS == 1)

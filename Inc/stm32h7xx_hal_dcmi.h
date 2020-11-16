@@ -155,6 +155,7 @@ typedef struct
   void (* MspInitCallback)(struct __DCMI_HandleTypeDef *hdcmi);          /*!< DCMI Msp Init callback    */
   void (* MspDeInitCallback)(struct __DCMI_HandleTypeDef *hdcmi);        /*!< DCMI Msp DeInit callback  */
 #endif  /* USE_HAL_DCMI_REGISTER_CALLBACKS */
+  void                          *userData;           /*!< Pointer to any used data associated with the handle */
 } DCMI_HandleTypeDef;
 
 #if (USE_HAL_DCMI_REGISTER_CALLBACKS == 1)

@@ -134,6 +134,7 @@ typedef struct
   void  (* MspDeInitCallback)      ( struct __NAND_HandleTypeDef * hnand);    /*!< NAND Msp DeInit callback            */
   void  (* ItCallback)             ( struct __NAND_HandleTypeDef * hnand);    /*!< NAND IT callback                    */
 #endif
+  void                           *userData;  /*!< Pointer to any used data associated with the handle */
 } NAND_HandleTypeDef;
 
 #if (USE_HAL_NAND_REGISTER_CALLBACKS == 1)

@@ -191,8 +191,7 @@ typedef struct
   void (* MspDeInitCallback)(struct __LTDC_HandleTypeDef *hltdc);     /*!< LTDC Msp DeInit callback    */
 
 #endif /* USE_HAL_LTDC_REGISTER_CALLBACKS */
-
-
+  void                        *userData;                /*!< Pointer to any used data associated with the handle */
 } LTDC_HandleTypeDef;
 
 #if (USE_HAL_LTDC_REGISTER_CALLBACKS == 1)

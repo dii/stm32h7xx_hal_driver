@@ -164,6 +164,7 @@ typedef struct
   void (* DirectionUpCallback)(struct __LPTIM_HandleTypeDef *hlptim);        /*!< Up-counting direction change Callback        */
   void (* DirectionDownCallback)(struct __LPTIM_HandleTypeDef *hlptim);      /*!< Down-counting direction change Callback      */
 #endif /* USE_HAL_LPTIM_REGISTER_CALLBACKS */
+  void                          *userData;         /*!< Pointer to any used data associated with the handle */
 } LPTIM_HandleTypeDef;
 
 #if (USE_HAL_LPTIM_REGISTER_CALLBACKS == 1)

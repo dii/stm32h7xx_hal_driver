@@ -91,7 +91,7 @@ typedef struct
 
   __IO HAL_RNG_StateTypeDef   State;        /*!< RNG communication state */
 
-  __IO  uint32_t              ErrorCode;     /*!< RNG Error code               */
+  __IO  uint32_t              ErrorCode;    /*!< RNG Error code               */
 
   uint32_t                    RandomNumber; /*!< Last Generated RNG Data */
 
@@ -102,7 +102,7 @@ typedef struct
   void (* MspInitCallback)(struct __RNG_HandleTypeDef *hrng);                          /*!< RNG Msp Init callback      */
   void (* MspDeInitCallback)(struct __RNG_HandleTypeDef *hrng);                        /*!< RNG Msp DeInit callback    */
 #endif  /* USE_HAL_RNG_REGISTER_CALLBACKS */
-
+  void                        *userData;    /*!< Pointer to any used data associated with the handle */
 } RNG_HandleTypeDef;
 
 #if (USE_HAL_RNG_REGISTER_CALLBACKS == 1)

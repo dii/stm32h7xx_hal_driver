@@ -146,6 +146,7 @@ typedef struct __I2S_HandleTypeDef
   void (* MspDeInitCallback)(struct __I2S_HandleTypeDef *hi2s);          /*!< I2S Msp DeInit callback            */
 
 #endif  /* USE_HAL_I2S_REGISTER_CALLBACKS */
+  void                       *userData;            /*!< Pointer to any used data associated with the handle */
 } I2S_HandleTypeDef;
 
 #if (USE_HAL_I2S_REGISTER_CALLBACKS == 1UL)

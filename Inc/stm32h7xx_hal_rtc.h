@@ -229,7 +229,7 @@ typedef struct
   void (* MspDeInitCallback)(struct __RTC_HandleTypeDef *hrtc);              /*!< RTC Msp DeInit callback            */
 
 #endif /* (USE_HAL_RTC_REGISTER_CALLBACKS == 1) */
-
+  void                      *userData;  /*!< Pointer to any used data associated with the handle */
 } RTC_HandleTypeDef;
 
 #if (USE_HAL_RTC_REGISTER_CALLBACKS == 1)

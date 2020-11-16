@@ -177,7 +177,8 @@ typedef struct __DMA_HandleTypeDef
 
  uint32_t                         DMAmuxRequestGenStatusMask;                                       /*!< DMAMUX request generator Status mask          */
 
-}DMA_HandleTypeDef;
+ void                             *userData;                                                        /*!< Pointer to any used data associated with the handle */
+} DMA_HandleTypeDef;
 
 /**
   * @}

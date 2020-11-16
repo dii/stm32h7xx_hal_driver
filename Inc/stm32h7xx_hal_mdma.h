@@ -225,19 +225,21 @@ typedef struct __MDMA_HandleTypeDef
   void                  (* XferAbortCallback)( struct __MDMA_HandleTypeDef * hmdma);           /*!< MDMA transfer Abort callback           */
 
 
-  MDMA_LinkNodeTypeDef *FirstLinkedListNodeAddress;                                             /*!< specifies the first node address of the transfer list
-                                                                                                     (after the initial node defined by the Init struct)
-                                                                                                     this parameter is used internally by the MDMA driver
-                                                                                                     to construct the linked list node
+  MDMA_LinkNodeTypeDef *FirstLinkedListNodeAddress;                                            /*!< specifies the first node address of the transfer list
+                                                                                                    (after the initial node defined by the Init struct)
+                                                                                                    this parameter is used internally by the MDMA driver
+                                                                                                    to construct the linked list node
                                                                                                 */
 
   MDMA_LinkNodeTypeDef *LastLinkedListNodeAddress;                                             /*!< specifies the last node address of the transfer list
                                                                                                     this parameter is used internally by the MDMA driver
                                                                                                     to construct the linked list node
                                                                                                 */
-  uint32_t LinkedListNodeCounter;                                                               /*!< Number of nodes in the MDMA linked list */
+  uint32_t LinkedListNodeCounter;                                                              /*!< Number of nodes in the MDMA linked list */
 
   __IO uint32_t          ErrorCode;                                                            /*!< MDMA Error code                        */
+
+  void                   *userData;                                                            /*!< Pointer to any used data associated with the handle */
 
 } MDMA_HandleTypeDef;
 

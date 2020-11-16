@@ -138,6 +138,7 @@ typedef struct
 void (* MspInitCallback)                (struct __OPAMP_HandleTypeDef *hopamp);
 void (* MspDeInitCallback)              (struct __OPAMP_HandleTypeDef *hopamp); 
 #endif /* USE_HAL_OPAMP_REGISTER_CALLBACKS */ 
+  void                          *userData;                    /*!< Pointer to any used data associated with the handle */
 } OPAMP_HandleTypeDef;
 
 /** 

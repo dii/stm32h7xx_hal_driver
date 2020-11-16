@@ -65,6 +65,7 @@ typedef struct __RAMECC_HandleTypeDef
   __IO HAL_RAMECC_StateTypeDef    State;                                                                /*!< RAMECC state                 */
   __IO uint32_t                   ErrorCode;                                                            /*!< RAMECC Error Code            */
   void                            (* DetectErrorCallback)( struct __RAMECC_HandleTypeDef *hramecc);     /*!< RAMECC error detect callback */
+  void                            *userData;                                                            /*!< Pointer to any used data associated with the handle */
 }RAMECC_HandleTypeDef;
 
 /**

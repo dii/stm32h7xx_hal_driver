@@ -124,8 +124,8 @@ typedef struct
   void (*MspInitCallback)    (struct __SWPMI_HandleTypeDef *hswpmi); /*!< SWPMI MSP init callback */
   void (*MspDeInitCallback)  (struct __SWPMI_HandleTypeDef *hswpmi); /*!< SWPMI MSP de-init callback */
 #endif
-
-}SWPMI_HandleTypeDef;
+  void                           *userData;     /*!< Pointer to any used data associated with the handle */
+} SWPMI_HandleTypeDef;
 
 #if (USE_HAL_SWPMI_REGISTER_CALLBACKS == 1)
 /**

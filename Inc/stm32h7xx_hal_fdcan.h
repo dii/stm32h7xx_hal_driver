@@ -479,7 +479,7 @@ typedef struct
                                    This parameter can be a value of @ref FDCAN_TT_time_master               */
 
   uint32_t SyncDevLimit;      /*!< Specifies the Synchronization Deviation Limit SDL of the TUR
-                                   numerator : TUR = (Numerator ± SDL) / Denominator.
+                                   numerator : TUR = (Numerator ï¿½ SDL) / Denominator.
                                    With : SDL = 2^(SyncDevLimit+5).
                                    This parameter must be a number between 0 and 7                          */
 
@@ -748,7 +748,7 @@ typedef struct
   void (* MspInitCallback)(struct __FDCAN_HandleTypeDef *hfdcan);                                              /*!< FDCAN Msp Init callback                   */
   void (* MspDeInitCallback)(struct __FDCAN_HandleTypeDef *hfdcan);                                            /*!< FDCAN Msp DeInit callback                 */
 #endif /* USE_HAL_FDCAN_REGISTER_CALLBACKS */
-
+  void                        *userData;        /*!< Pointer to any used data associated with the handle */
 } FDCAN_HandleTypeDef;
 
 #if USE_HAL_FDCAN_REGISTER_CALLBACKS == 1

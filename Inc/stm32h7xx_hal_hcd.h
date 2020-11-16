@@ -91,6 +91,7 @@ typedef struct
   void (* MspInitCallback)(struct __HCD_HandleTypeDef *hhcd);                           /*!< USB OTG HCD Msp Init callback           */
   void (* MspDeInitCallback)(struct __HCD_HandleTypeDef *hhcd);                         /*!< USB OTG HCD Msp DeInit callback         */
 #endif /* USE_HAL_HCD_REGISTER_CALLBACKS */
+  void                      *userData;  /*!< Pointer to any used data associated with the handle */
 } HCD_HandleTypeDef;
 /**
   * @}

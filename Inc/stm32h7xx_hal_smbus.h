@@ -172,6 +172,7 @@ typedef struct
   void (* MspDeInitCallback)(struct __SMBUS_HandleTypeDef *hsmbus);              /*!< SMBUS Msp DeInit callback                   */
 
 #endif  /* USE_HAL_SMBUS_REGISTER_CALLBACKS */
+  void                        *userData;        /*!< Pointer to any used data associated with the handle */
 } SMBUS_HandleTypeDef;
 
 #if (USE_HAL_SMBUS_REGISTER_CALLBACKS == 1)

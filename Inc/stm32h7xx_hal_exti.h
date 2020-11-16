@@ -55,6 +55,7 @@ typedef struct
 {
   uint32_t Line;                    /*!<  Exti line number */
   void (* PendingCallback)(void);   /*!<  Exti pending callback */
+  void *userData;                   /*!< Pointer to any used data associated with the handle */
 } EXTI_HandleTypeDef;
 
 /**

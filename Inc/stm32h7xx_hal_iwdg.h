@@ -65,6 +65,8 @@ typedef struct
   IWDG_TypeDef                 *Instance;  /*!< Register base address    */
 
   IWDG_InitTypeDef             Init;       /*!< IWDG required parameters */
+
+  void                         *userData;  /*!< Pointer to any used data associated with the handle */
 } IWDG_HandleTypeDef;
 
 
